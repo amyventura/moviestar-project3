@@ -1,0 +1,82 @@
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.514);
+}
+.special_modal .modal-content .modal-body {
+  background-color: hsl(300deg 2% 10%);
+  /* background-image: url('../../pages/sign-in/image\ \(39\)\ \(1\).png'); */
+  color: #fff;
+  padding: 0 !important;
+
+  width: 100% !important;
+  border: none !important;
+}
+.preview {
+  position: relative;
+}
+.name {
+  color: #6a0dad;
+  font-size: 4vw;
+  font-weight: 800;
+  position: absolute;
+  left: 100px;
+  bottom: 150px;
+}
+.description__button {
+  cursor: pointer;
+  color: #111;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  background-color: #fff;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+}
+.description__button:hover {
+  color: #fff;
+  background-color: #111;
+}
+.about {
+  max-height: 200px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-gap: 25px;
+  padding: 0px 50px;
+  padding-top: 30px;
+}
+.lable {
+  color: rgba(141, 136, 136, 0.904);
+}
+
+.season_ep {
+  height: 30px;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.season {
+  width: 120px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: rgb(71, 71, 71);
+  color: white;
+}
+.related {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-gap: 20px;
+  border-bottom: 1px solid gray;
+  padding: 50px;
+}
+.about__movie {
+  padding: 50px;
+}
