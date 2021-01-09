@@ -36,10 +36,10 @@ const [scroll,handleScroll]=useState(false);
         <Nav.Link href="#Favorites">Favorites</Nav.Link>
         <Nav.Link href="#Watch later">Watch Later</Nav.Link>
 
-        <Nav.Link href="#Horror">Horror</Nav.Link>
+        {/* <Nav.Link href="#Horror">Horror</Nav.Link>
         <Nav.Link href="#Drama">Drama
 </Nav.Link>
-        <Nav.Link href="#Comedy">Comedy</Nav.Link>
+        <Nav.Link href="#Comedy">Comedy</Nav.Link> */}
 
       </Nav>
       <Nav>
