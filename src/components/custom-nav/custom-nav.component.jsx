@@ -29,6 +29,7 @@ const [scroll,handleScroll]=useState(false);
             
             <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark" style={{width:'100vw'}}>
     <Navbar.Brand href="/"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="logo" className='logo'/> </Navbar.Brand>
+    <input type="text" name="" id=""/>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
