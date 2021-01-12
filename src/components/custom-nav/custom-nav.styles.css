@@ -12,10 +12,10 @@
   z-index: 100;
 }
 .nav_black {
-  background-color: #6a0dad;
+  background-color: #6e1c0c;
 }
 .logo {
-  width: 100px;
+  width: 150px;
   object-fit: contain;
   /* position: fixed; */
   /* left: 20px; */
