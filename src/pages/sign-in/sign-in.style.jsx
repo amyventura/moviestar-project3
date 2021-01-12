@@ -6,7 +6,7 @@ width:450px;
 min-width:450px;
 max-width:450px;
 max-height:686px;
-min-height:686px;
+min-height:530px;
 padding:50px 68px;
 background-color: rgba(0, 0, 0, 0.75);
 margin:0 auto;
@@ -40,10 +40,10 @@ margin-bottom:0px;
         margin-top:20px;
         .gray{
             color:gray;
-            font-size:22px;
+            font-size:15px;
         }
         .signup{
-            font-size:22px;
+            font-size:15px;
             font-weight:bold;
             margin-left:10px;
             @media screen and (max-width:600px){
@@ -73,7 +73,7 @@ export const Button=styled.button`
 width:100%;
 height:50px;
 border:none;
-background-color: #6A0DAD;
+background-color: #202e35;
 color:#ffff;
 text-align:center;
 border-radius:4px;
