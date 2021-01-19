@@ -5,23 +5,18 @@ import ForgetPassword from './pages/forget-password/forget-password.page'
 import { GlobalStyles } from './global.styles';
 import Home from './pages/home-page/home-page.page';
 import SignUp from './pages/sign-up/sign-up.page';
-import Join from './pages/join';
-import Chat from './pages/chat';
-
-function App() {
+function SignIn() {
   return (
-    <div className="App">
+    <div className="SignIn">
       <GlobalStyles/>
 <Route exact path='/' component={SignIn}/>
 <Route exact path='/forget-password' component={ForgetPassword}/>
 <Route exact path='/home' component={Home}/>
 <Route exact path='/signup' component={SignUp}/>
-<Route path='/' exact component={Join} />
-<Route path='/chat' component={Chat} />
 
 
     </div>
   );
 }
 
-export default App;
+export default SignIn;
