@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import CustomInput from '../../components/custom-input/custom-input.component';
 import './sign-in.css'
 
+
 import {Container, Header ,Button} from './sign-in.style';
 
 const SignIn=(props)=>{
     const [email,setEmail]=useState('');
 const [password,setPassword]=useState('');
     const handleEmail = event => {
+      
         const { value } = event.target;
         setEmail(value);
       

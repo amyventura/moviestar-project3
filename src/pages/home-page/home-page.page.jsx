@@ -1,11 +1,14 @@
 import React from 'react';
 import CustomNav from '../../components/nav/nav.components';
 
+
 import {Container } from './home-page.styles';
 
 import Row from '../../components/row/rows.component'
 import Banner from '../../components/banner/banner.component';
 import Navs from '../../components/custom-nav/custom-nav.component';
+
+
 
 const Home =()=>{
     
