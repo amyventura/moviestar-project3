@@ -13,6 +13,7 @@ const epi=[1,2,3,4,5,6,7,8,9];
 const relate=[1,2,3,4,5,6];
 
     return (
+      <div>
       <Modal
         {...props}
         dialogClassName="modal-90w"
@@ -57,7 +58,7 @@ const relate=[1,2,3,4,5,6];
           </div>
           <div style={{padding:'0 50px'}}>
 {
-  epi.map((epp,index)=><Episode ep={index} />)
+  epi.map((epp,index)=><Episode ep={index} key={index + "e"}  />)
 }
           </div>
           
@@ -80,6 +81,7 @@ const relate=[1,2,3,4,5,6];
 </div>
         </Modal.Body>
       </Modal>
+      </div>
     );
   }
   export default AlertModal;

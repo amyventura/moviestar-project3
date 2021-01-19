@@ -24,7 +24,9 @@ const [scroll,handleScroll]=useState(false);
               })
         }
     }, [])
+    
     return (
+
         <div className={`nav ${scroll&&'nav_black'}`}>
             
             <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark" style={{width:'100vw'}}>
