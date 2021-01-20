@@ -36,13 +36,7 @@ const [scroll,handleScroll]=useState(false);
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="#Favorites">Favorites</Nav.Link>
-        <Nav.Link href="#Watch later">Watch Later</Nav.Link>
-        <Nav.Link href="#Chat">Chat</Nav.Link>
-        {/* <Nav.Link href="#Drama">Drama
-</Nav.Link>
-        <Nav.Link href="#Comedy">Comedy</Nav.Link> */}
-
+        <Nav.Link href="/Chat">Chat</Nav.Link>
       </Nav>
       <Nav>
       <NavDropdown title="Users" id="collasible-nav-dropdown">

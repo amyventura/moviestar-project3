@@ -16,7 +16,7 @@ const Home =()=>{
         {/* <img class="hero " src="https://occ-0-3189-300.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbAhWrgpOt7uvhjFVCB4ztX-mtJnMyl_M_SYigjJcGzcpxWDA1FdNZVhBV_JwbhNevHK5fq4dwa8rE36GsM97sWdXm5q.webp?r=541" alt=""></img> */}
         <Row title='Favorites '/>
         <Row title='Watch Later '/>
-        <Row title='Chat '/>
+        {/* <Row title='Chat '/> */}
        {/*  <Row title='Drama '/>
         <Row title='Comedy '/>
         <Row title='New Realese '/>

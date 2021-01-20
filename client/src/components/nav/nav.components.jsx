@@ -11,11 +11,7 @@ const CustomNav=()=>{
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="/tv-shows">Tv Shows</Nav.Link>
-        <Nav.Link href="/movies">Movies</Nav.Link>
-        <Nav.Link href="/latest">latest</Nav.Link>
-        <Nav.Link href="/my-list">My List</Nav.Link>
-
+        <Nav.Link href="/Chat">Chat</Nav.Link>
       </Nav>
       <Nav>
       <NavDropdown title="Users" id="collasible-nav-dropdown">
