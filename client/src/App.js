@@ -5,8 +5,8 @@ import ForgetPassword from './pages/forget-password/forget-password.page'
 import { GlobalStyles } from './global.styles';
 import Home from './pages/home-page/home-page.page';
 import SignUp from './pages/sign-up/sign-up.page';
-import Join from './pages/join';
-import Chat from './pages/chat';
+import { Join } from './pages/Join/Join';
+import { Chat } from './pages/Chat/Chat';
 
 function App() {
   return (

@@ -6,7 +6,6 @@ import io from "socket.io-client";
 import {TopBar} from '../../components/TopBar/TopBar';
 import {Input} from '../../components/Input/Input';
 import {Messages} from '../../components/Messages/Messages';
-import {TextContainer} from '../TextContainer/TextContainer'
 
 import './Chat.css';
 
@@ -57,7 +56,7 @@ export const Chat = ({ location }) => {
 
   return (
     <div className="outerContainer">
-    <TextContainer users={users} />
+    {/* <TextContainer users={users} /> */}
       <div className="container">
           <TopBar room={room} />
           <Messages messages={messages} name={name} />

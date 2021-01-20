@@ -8,7 +8,6 @@ const session = require("express-session");
 const passport = require("./utils/passport");
 const logger = require("morgan");
 const http = require('http');
-const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
 
@@ -18,7 +17,6 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users'
 
 const router = require('./routes/router');
 
-const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
