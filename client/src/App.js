@@ -16,10 +16,8 @@ function App() {
 <Route exact path='/forget-password' component={ForgetPassword}/>
 <Route exact path='/home' component={Home}/>
 <Route exact path='/signup' component={SignUp}/>
-<Route path='/' exact component={Join} />
-<Route path='/chat' component={Chat} />
-
-
+<Route path='/chat' exact component={Join} />
+<Route path='/room' component={Chat} />
     </div>
   );
 }
