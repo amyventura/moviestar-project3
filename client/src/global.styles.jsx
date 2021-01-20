@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
 body {
 	width:100vw;
 	min-height:100vh;
-	font-family: 'Montserrat';
+	font-family: 'Verdana';
 	margin:0 auto!important;
 	overflow-x:hidden;
 	padding:0px 0px;
