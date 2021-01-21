@@ -17,7 +17,7 @@ export const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'https://react-chat-page.herokuapp.com/';
+  const ENDPOINT = 'http://localhost:3001';
 
 
   useEffect(() => {
@@ -36,7 +36,9 @@ export const Chat = ({ location }) => {
   }, [ENDPOINT, location.search]);
   
   useEffect(() => {
+    console.log("use effect")
     socket.on('message', message => {
+      console.log(message, "!!!!!!!!!!!!!!!!!!!");
       setMessages(msgs => [ ...msgs, message ]);
     });
     
@@ -47,8 +49,9 @@ export const Chat = ({ location }) => {
 
   const sendMessage = (event) => {
     event.preventDefault();
-
+    console.log(message);
     if(message) {
+      console.log("inside");
       socket.emit('sendMessage', message, () => setMessage(''));
     }
   }
@@ -56,7 +59,7 @@ export const Chat = ({ location }) => {
 
   return (
     <div className="outerContainer">
-    <TextContainer users={users} />
+    <TextContainer />
       <div className="container">
           <TopBar room={room} />
           <Messages messages={messages} name={name} />

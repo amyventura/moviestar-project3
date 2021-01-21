@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const { mongoOptions, sessionOptions } = require("./utils/config");
-const routes = require("./routes/router");
+// const routes = require("./routes/router");
 const app = express();
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -20,18 +20,23 @@ const { addUser, removeUser, getUser, getUsersInRoom } = require('./utils/users'
 const router = require('./routes/router');
 
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
 
-io.on('connect', (socket) => {
+io.on('connection', (socket) => {
   
   socket.on('join', ({ name, room }, callback) => {
-    
+    console.log("hello")
     const { error, user } = addUser({ id: socket.id, name, room });
-
+    console.log(user)
     if(error) return callback(error);
 
     socket.join(user.room);
-
+    console.log("Joined")
     socket.emit('message', { user: 'Admin', text: `${user.name}, Welcome to room ${user.room}!`});
     socket.broadcast.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has joined!` });
 
@@ -41,6 +46,7 @@ io.on('connect', (socket) => {
   });
 
   socket.on('sendMessage', (message, callback) => {
+    console.log(socket.id)
     const user = getUser(socket.id);
 
     io.to(user.room).emit('message', { user: user.name, text: message });
@@ -74,7 +80,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Add routes, both API and view
-app.use(routes);
+// app.use(routes);
 
 app.use(cors());
 app.use(router);
@@ -83,6 +89,7 @@ app.use(router);
 mongoose.connect(process.env.ATLAS_URL || "mongodb://localhost/mern", mongoOptions);
 
 // Start the API server
-app.listen(PORT, function () {
+server.listen(PORT, function () {
 	console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
