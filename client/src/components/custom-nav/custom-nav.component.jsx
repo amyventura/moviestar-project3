@@ -12,7 +12,7 @@ function handleInput(e) {
 // movie trailer on current search
 function handleSearchClicked() {
   movieTrailer( currentSearch )
-  .then( response => console.log( response ) )
+  .then( response => window.open( response, "_blank" ))
 }
 function checkForEnter(key) {
   if(key.charCode===13) {
