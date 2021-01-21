@@ -1,10 +1,24 @@
 import React,{useEffect,useState} from 'react'
 import logo from './Moviestar-logo-white.png'
 import './custom-nav.styles.css'
-
-
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
+const movieTrailer = require( 'movie-trailer' )
+let currentSearch = ""
 
+// update current search with users input 
+function handleInput(e) {
+  currentSearch=e.target.value
+}
+// movie trailer on current search
+function handleSearchClicked() {
+  movieTrailer( currentSearch )
+  .then( response => console.log( response ) )
+}
+function checkForEnter(key) {
+  if(key.charCode===13) {
+     handleSearchClicked()
+  }
+}
 function Navs() {
 const [scroll,handleScroll]=useState(false);
     useEffect(() => {
@@ -31,8 +45,9 @@ const [scroll,handleScroll]=useState(false);
             
             <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark" style={{width:'100vw'}}>
 
-    <Navbar.Brand href="/"><img class="logo" src={logo} alt="Logo" /> </Navbar.Brand>
-    <input type="text" name="" id=""/>
+    <Navbar.Brand href="/"><img className="logo" src={logo} alt="Logo" /> </Navbar.Brand>
+    <input type="text" onChange={handleInput} onKeyPress={checkForEnter}  name="" id=""/>
+    <button type="submit" onClick={handleSearchClicked}>submit</button>
 
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">

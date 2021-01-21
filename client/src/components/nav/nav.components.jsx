@@ -5,10 +5,13 @@ import {Navbar,Nav,NavDropdown} from 'react-bootstrap'
 
 
 const CustomNav=()=>{
-    return <Container><Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark">
-    <Navbar.Brand href="/">Logo Goes Here </Navbar.Brand>
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    <Navbar.Collapse id="responsive-navbar-nav">
+
+    return <Container>
+      <Navbar collapseOnSelect expand="lg" bg="transparent" variant="dark">
+
+      <Navbar.Brand href="/">Logo Goes Here </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
         <Nav.Link href="/home">Home</Nav.Link>
         <Nav.Link href="/tv-shows">Tv Shows</Nav.Link>
