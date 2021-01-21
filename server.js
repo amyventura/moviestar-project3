@@ -7,6 +7,8 @@ const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./utils/passport");
 const logger = require("morgan");
+
+// socket.io chat
 const http = require('http');
 const socketio = require('socket.io');
 const cors = require('cors');
@@ -20,29 +22,10 @@ const router = require('./routes/router');
 const server = http.createServer(app);
 const io = socketio(server);
 
-// logging (development)
-app.use(logger("dev"));
-
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// Serve static assets from react build
-app.use(express.static("client/build"));
-
-// We need to use sessions to keep track of our user's login status
-app.use(session(sessionOptions));
-app.use(passport.initialize());
-app.use(passport.session());
-
-// Add routes, both API and view
-app.use(routes);
-
-app.use(cors());
-app.use(router);
-
 io.on('connect', (socket) => {
+  
   socket.on('join', ({ name, room }, callback) => {
+    
     const { error, user } = addUser({ id: socket.id, name, room });
 
     if(error) return callback(error);
@@ -74,6 +57,27 @@ io.on('connect', (socket) => {
     }
   })
 });
+
+// logging (development)
+app.use(logger("dev"));
+
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Serve static assets from react build
+app.use(express.static("client/build"));
+
+// We need to use sessions to keep track of our user's login status
+app.use(session(sessionOptions));
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Add routes, both API and view
+app.use(routes);
+
+app.use(cors());
+app.use(router);
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.ATLAS_URL || "mongodb://localhost/mern", mongoOptions);
