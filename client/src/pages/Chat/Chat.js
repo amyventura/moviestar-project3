@@ -6,6 +6,7 @@ import {TextContainer} from '../../components/TextContainer/TextContainer'
 import {TopBar} from '../../components/TopBar/TopBar';
 import {Input} from '../../components/Input/Input';
 import {Messages} from '../../components/Messages/Messages';
+import Banner from '../../components/banner/banner.component.jsx';
 
 import './Chat.css';
 
@@ -59,6 +60,7 @@ export const Chat = ({ location }) => {
 
   return (
     <div className="outerContainer">
+    <Banner />
     <TextContainer />
       <div className="container">
           <TopBar room={room} />
