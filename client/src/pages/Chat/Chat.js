@@ -6,8 +6,8 @@ import {TextContainer} from '../../components/TextContainer/TextContainer'
 import {TopBar} from '../../components/TopBar/TopBar';
 import {Input} from '../../components/Input/Input';
 import {Messages} from '../../components/Messages/Messages';
-import Banner from '../../components/banner/banner.component.jsx';
-
+import Trailer from '../../components/trailer/trailer.component.jsx';
+import Nav from '../../components/custom-nav/custom-nav.component.jsx';
 import './Chat.css';
 
 let socket;
@@ -60,7 +60,8 @@ export const Chat = ({ location }) => {
 
   return (
     <div className="outerContainer">
-    <Banner />
+      <Nav />
+    <Trailer />
     <TextContainer />
       <div className="container">
           <TopBar room={room} />

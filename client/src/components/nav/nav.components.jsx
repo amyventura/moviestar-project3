@@ -13,14 +13,14 @@ const CustomNav=()=>{
         <Nav.Link href="/home">Home</Nav.Link>
         <Nav.Link href="/Chat">Chat</Nav.Link>
       </Nav>
-      <Nav>
+      {/* <Nav>
       <NavDropdown title="Users" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">User 1</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">User 2</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">Sign Out</NavDropdown.Item>
       </NavDropdown>
-      </Nav>
+      </Nav> */}
     </Navbar.Collapse>
   </Navbar>
     </Container>

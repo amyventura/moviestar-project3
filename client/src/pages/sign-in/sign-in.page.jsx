@@ -1,5 +1,4 @@
 import React ,{useState} from 'react';
-import { Link } from 'react-router-dom';
 import CustomInput from '../../components/custom-input/custom-input.component';
 import './sign-in.css'
 
@@ -38,12 +37,12 @@ const [password,setPassword]=useState('');
                                 />
 <Button onClick={()=>props.history.push('/home')}>Sign In</Button>
         </div>
-        <div className="lower">
+        {/* <div className="lower">
             <div className="to-signup">
                 <span className="gray">New to Movie Star ?</span>
                 <a href="/signup" className="signup">SignUp</a>
             </div>
-        </div>
+        </div> */}
         
         </Container>
     
