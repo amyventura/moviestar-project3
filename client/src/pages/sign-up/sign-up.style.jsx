@@ -59,7 +59,7 @@ export const Button=styled.button`
 width:100%;
 height:50px;
 border:none;
-background-color: #6A0DAD;
+background-color: #e95c17;
 color:#ffff;
 text-align:center;
 border-radius:4px;

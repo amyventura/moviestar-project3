@@ -13,7 +13,7 @@ backgroundPosition:"center center",
            <h1 className='banner__title'>Jumanji: The Next Level</h1>
            <div className="banner__buttons">
                <button className="banner__button">
-                   Watch Trailer
+                   <a href="https://www.youtube.com/watch?v=rBxcF-r9Ibs" target="_blank">Watch Trailer</a>
                </button>
            </div>
            <h1 className="banner__description">

@@ -73,7 +73,7 @@ export const Button=styled.button`
 width:100%;
 height:50px;
 border:none;
-background-color: #e95c17;
+background-color: #202e35;
 color:#ffff;
 text-align:center;
 border-radius:4px;
