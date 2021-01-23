@@ -19,9 +19,9 @@ const AlertModal=(props)=> {
         <Modal.Body closeButton>
           <div className='preview'>
  <img src={props.activeMovie.poster_url} alt="poster" style={{width:'100%'}} />
-           <button className="description__button">
+           {/* <button className="description__button">
                 PLAY
-               </button>
+               </button> */}
                <span className="name">{props.activeMovie.name}</span>
           </div>
         </Modal.Body>
